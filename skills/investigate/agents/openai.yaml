@@ -1,0 +1,4 @@
+interface:
+  display_name: "builder: investigate"
+  short_description: "Explain behavior, impact, and likely causes"
+  default_prompt: "Use $investigate to explain this behavior and identify the next useful action."

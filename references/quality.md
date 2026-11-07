@@ -1,0 +1,23 @@
+# Quality and evidence
+
+Run required checks; add tests or documentation for concrete uncovered needs. Reassess affected evidence after fixes.
+
+## Linking sources and evidence
+
+Link consequential claims to inspectable original sources with enough context to reproduce and interpret them. Summaries and landing pages do not substitute for evidence. Disclose missing sources or access; retain original captures when live data cannot be revisited.
+
+## Presenting validation evidence
+
+Choose screenshots, recordings, queries, or logs that demonstrate the claim. Preserve context and disclose edits and limitations. Use recordings or behavioral checks for interactions a screenshot cannot prove; screenshots alone cannot prove backend correctness.
+
+For visible changes:
+
+- Compare labeled base/head captures with matching scenario, data, viewport, and interaction state. Disclose missing baselines or material differences.
+- Show a readable region with enough context to interpret it, link originals, and collapse secondary examples. Link full-size images when compact captures are unavailable.
+- Identify each capture's environment and revision, and label synthetic fixtures.
+
+Include relevant evidence in PRs, keep captures outside tracked source, and verify published artifacts. Reconcile partial upload success before retrying.
+
+## Operational evidence
+
+Distinguish source, CI, deployment, runtime acceptance, and customer exposure. Test the intended artifact and affected behavior, not just command or pod health. Make impact comparisons reproducible; samples are not population counts, and absent errors with inadequate telemetry do not establish health.

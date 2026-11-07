@@ -1,0 +1,4 @@
+interface:
+  display_name: "builder: validate"
+  short_description: "Check acceptance against concrete evidence"
+  default_prompt: "Use $validate to check this outcome against its acceptance criteria."

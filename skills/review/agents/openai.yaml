@@ -1,0 +1,4 @@
+interface:
+  display_name: "builder: review"
+  short_description: "Assess changes, findings, and review coverage"
+  default_prompt: "Use $review to assess this change and existing findings, focusing on material gaps in review coverage."

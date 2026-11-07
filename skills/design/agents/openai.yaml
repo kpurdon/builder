@@ -1,0 +1,4 @@
+interface:
+  display_name: "builder: design"
+  short_description: "Explore problems, choose approaches, and plan delivery"
+  default_prompt: "Use $design to clarify this problem or turn an agreed approach into a delivery plan."

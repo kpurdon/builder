@@ -1,0 +1,24 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "builder",
+  "version": "0.2.0",
+  "description": "Carry ideas through engineering delivery, operational investigation, and verified outcomes.",
+  "author": {
+    "name": "Kyle Purdon"
+  },
+  "repository": "https://github.com/kpurdon/builder",
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/setup/SKILL.md",
+      "interface": {
+        "displayName": "builder",
+        "shortDescription": "Ideas through verified delivery",
+        "defaultPrompt": [
+          "Use $manage with a Codex Goal to carry this project through agreed acceptance.",
+          "Use $execute with a Codex Goal to get this PR ready to merge through independent review, required CI, and repository-required approvals.",
+          "Use $review to review this change."
+        ]
+      }
+    }
+  }
+}
