@@ -24,8 +24,8 @@
 
 ## Sessions
 
-| Assignment / skill / launch ID | Codex thread / runtime when known | Terminal session / tab / group IDs | Launch / grouping evidence | Ownership / successor |
-| --- | --- | --- | --- | --- |
+| Assignment / skill / launch ID | Codex thread / runtime when known | Terminal session / tab / group IDs | Launch / grouping evidence | Ownership / successor | Retirement evidence / pending cleanup |
+| --- | --- | --- | --- | --- | --- |
 
 ## Pending decisions and recovery
 
