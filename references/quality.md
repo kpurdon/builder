@@ -8,12 +8,12 @@ Link consequential claims to inspectable original sources with enough context to
 
 ## Presenting validation evidence
 
-Choose screenshots, recordings, queries, or logs that demonstrate the claim. Preserve context and disclose edits and limitations. Use recordings or behavioral checks for interactions a screenshot cannot prove; screenshots alone cannot prove backend correctness.
+Choose screenshots, recordings, queries, or logs that demonstrate the claim. Preserve context and disclose edits and limitations that affect interpretation. Use recordings or behavioral checks for interactions a screenshot cannot prove; screenshots alone cannot prove backend correctness.
 
 For visible changes:
 
 - Compare labeled base/head captures with matching scenario, data, viewport, and interaction state. Disclose missing baselines or material differences.
-- Show a readable region with enough context to interpret it, link originals, and collapse secondary examples. Link full-size images when compact captures are unavailable.
+- Show a readable region with enough context to interpret it and link originals. Link full-size images when compact captures are unavailable.
 - Identify each capture's environment and revision, and label synthetic fixtures.
 
 Include relevant evidence in PRs, keep captures outside tracked source, and verify published artifacts. Reconcile partial upload success before retrying.
