@@ -5,7 +5,7 @@
 - Governing record: <project, issue, or this file>
 - Problem and users: <why this matters>
 - Scope and exclusions: <accepted outcomes and boundaries>
-- Acceptance criteria and finish line: <observable behavior, environment, evidence>
+- Acceptance criteria and finish line: <observable behavior, environment, evidence, and governing instruction for any narrower endpoint>
 - Lead: <session ID and observed state>
 - Goal: <owning thread, objective, observed state, and explicit request; budget only if user-specified>
 - Continuation: <completion return destination and how dependent work resumes; blocker if stopped>
@@ -19,14 +19,14 @@
 
 ## Deliveries
 
-| Outcome / acceptance | Prerequisites | Owner / session | Revision / artifact | Completion evidence | Blocker / next action |
+| Delivery endpoint / acceptance | Prerequisites | Owner / session | Revision / artifact | Milestone or completion evidence | Pending gate / next action / resumption trigger |
 | --- | --- | --- | --- | --- | --- |
 
 ## Sessions
 
-| Assignment / skill / launch ID | Codex thread / runtime when known | Terminal session / tab / group IDs | Launch / grouping evidence | Ownership / successor | Retirement evidence / pending cleanup |
+| Assignment / skill / launch ID | Codex thread / runtime when known | Terminal session / tab / group IDs | Launch / grouping evidence | Owner / accepted successor obligations | Retirement evidence / pending cleanup |
 | --- | --- | --- | --- | --- | --- |
 
 ## Pending decisions and recovery
 
-<Recommendation, dependent work, owner, and resumption action. Preserve unfinished work and evidence before transfer.>
+<Recommendation, dependent work, retained owner, and resumption trigger/action. Preserve unfinished work, evidence, and successor acceptance before transfer.>

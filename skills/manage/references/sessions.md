@@ -6,7 +6,7 @@ Prepare handoffs with the [brief](../../../templates/handoff.md), linking artifa
 
 ## Receiver selection
 
-Use fresh sessions for new handoffs unless the user selects an existing thread. Otherwise, continue only a verified current owner; matching titles or idle status are insufficient. User-selected threads need identity and scope checks, not recent ownership evidence.
+Continue the verified current owner when a delivery advances stages or resumes after a wait. Use fresh sessions for new deliveries unless the user selects an existing thread; matching titles or idle status are insufficient evidence of ownership. User-selected threads need identity and scope checks, not recent ownership evidence.
 
 ## Ownership and observation
 
@@ -16,17 +16,17 @@ Before dispatch, assign one owner and record the assignment, owner, and launch I
 
 Uncertain launches may already be running: preserve the prompt and reconcile before retrying. Correlation IDs do not deduplicate. Repair only the failed part of a partially accepted launch.
 
-Transfer only after the former writer stops; record the successor and unfinished work before it writes. An idle lead does not transfer or retire an executor's assignment.
+Transfer only after the former writer stops and a named successor accepts the remaining obligations; record that acceptance and unfinished work before the successor writes. Returning coordination to the lead does not transfer execution ownership. Idle sessions retain their assignments.
 
 ## Current-state records
 
-At handoff or a material state change, update owners, prerequisites, decisions, and next actions in the assignment and project record. Replace stale instructions in place, link history separately, and mark unverified state.
+At handoff or a material state change, update owners, prerequisites, decisions, and next actions in the assignment and project record. Distinguish the delivery endpoint from its next milestone; record pending gates and resumption triggers. Replace stale instructions in place, link history separately, and mark unverified state.
 
 ## Completion reporting
 
-Executors report completion to the return destination with assignment, launch, and thread IDs; the outcome reached; artifacts or revision; and acceptance evidence. Reports to the lead cover completion or the escalations below. Leads do not poll for status or require startup acknowledgements, progress reports, or intermediate approvals.
+Executors report completion to the return destination with assignment, launch, and thread IDs; the outcome reached; artifacts or revision; and acceptance evidence. Label intermediate results as milestones or waits, with the retained owner and next action. Send event-driven milestones when they unblock dependent work; leads do not poll for status or require startup acknowledgements, routine progress reports, or intermediate approvals.
 
-Bring blockers needing an unavailable decision, authority, or outside help to the user first. Involve the lead for a concrete dependency between assignments, naming the needed action. Executors retain delivery ownership and CI, review, and deployment waits. Leads may relay material scope changes without repeatedly prompting active owners.
+Executors present concrete merge or approval requests directly to the user and bring blockers needing an unavailable decision, authority, or outside help to the user first. Involve the lead for a concrete dependency between assignments, naming the needed action. A ready PR, unavailable permission, or completed set of available checks does not end ownership when acceptance remains open. Leads may relay material scope changes without repeatedly prompting active owners.
 
 Use permitted native messaging or the authorized governing record. If neither is available, keep the report in the executor's final response and disclose that it could not be delivered. Reconcile on concrete failure evidence; silence alone is insufficient.
 
@@ -38,7 +38,7 @@ Include any requested title in the brief and pass it at creation when supported.
 
 ## Retirement
 
-The lead owns retirement after accepting a completion report or recording a transfer. Preserve the outcome and evidence in the project record first; confirm no active descendants or unfinished work depend on the session. A completion report alone does not establish acceptance or cleanup authority.
+The lead owns retirement after verifying the delivery's acceptance criteria, cancellation of the assignment, or an accepted transfer to a named successor. A milestone report, user gate, or handback to the PM is insufficient. Preserve the outcome, evidence, and any accepted successor obligations in the project record first; confirm no active descendants or unfinished work depend on the session. A completion report alone does not establish acceptance or cleanup authority.
 
 Within established cleanup authority, close the execution session through the selected interface and its installed integration. Verify the recorded identity and preserve unrelated work sharing its resources. Let the integration own closure mechanics, confirmation, and uncertain-result handling.
 
