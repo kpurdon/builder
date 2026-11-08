@@ -8,6 +8,8 @@ Link consequential claims to inspectable original sources with enough context to
 
 ## Presenting validation evidence
 
+Prefer the running application or branch preview for UI validation. Check its backend compatibility and exercise the behavior it supports; use component fixtures to cover cases it cannot exercise.
+
 Choose screenshots, recordings, queries, or logs that demonstrate the claim. Preserve context and disclose edits and limitations that affect interpretation. Use recordings or behavioral checks for interactions a screenshot cannot prove; screenshots alone cannot prove backend correctness.
 
 For visible changes:

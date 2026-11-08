@@ -5,6 +5,7 @@ Read the final diff against its actual base and verify consequential claims. App
 ## Description
 
 - Lead with a relevant existing ticket link when available, then a short paragraph explaining the problem and changed behavior. Make the explanation stand alone. Use headings only when they help organize a longer description.
+- Describe the full scope: name backend/API changes and dependencies when present, even when the visible result is a frontend change. In a stack, describe this layer and link its prerequisite.
 - Include implementation details, examples, tradeoffs, or dependencies only when they materially help review. Omit work history and inventories of changed layers or unchanged behavior.
 - Honor explicit repository requirements; template headings alone do not make sections mandatory. Omit boilerplate sections, including Docs and Security when they add nothing relevant.
 
