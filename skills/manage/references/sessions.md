@@ -38,8 +38,8 @@ Include any requested title in the brief and pass it at creation when supported.
 
 ## Retirement
 
-The lead owns retirement after accepting a completion report or recording a transfer. Preserve the outcome and evidence in the project record first; confirm no active descendants or unfinished work depend on the session. A completion report alone does not establish acceptance or authority to close its terminal.
+The lead owns retirement after accepting a completion report or recording a transfer. Preserve the outcome and evidence in the project record first; confirm no active descendants or unfinished work depend on the session. A completion report alone does not establish acceptance or cleanup authority.
 
-Within established cleanup authority, close the execution tab through the selected integration. For iTerm2, use the installed `iterm2` plugin's `tabs` skill. Match the recorded tab ID to fresh inventory and check every pane, including minimized panes; keep tabs with unrelated or unfinished work open. Follow the integration's confirmation and uncertain-result handling; closure authority alone does not authorize force-closing.
+Within established cleanup authority, close the execution session through the selected interface and its installed integration. Verify the recorded identity and preserve unrelated work sharing its resources. Let the integration own closure mechanics, confirmation, and uncertain-result handling.
 
-Record tab closure evidence or the blocker and next action in the project record. If the integration is unavailable or closure is unconfirmed, leave cleanup pending. Archiving, closing tabs, and deleting worktrees are separate operations with separate authority and evidence. Cleanup failure does not undo acceptance.
+Record retirement evidence or the blocker and next action in the project record. If the integration is unavailable or closure is unconfirmed, leave cleanup pending. Archiving a session, closing its runtime, and deleting its worktree are separate operations with separate authority and evidence. Cleanup failure does not undo acceptance.
