@@ -5,7 +5,7 @@ Use builder's $<assigned-skill> for this assignment. Read its verified skill fil
 - Outcome and acceptance: <delivery endpoint and observable criteria, distinct from the next milestone>
 - Issue and requested title: <issue ID/link when applicable and any requested terminal/native session title under the [launch rules](../skills/manage/references/sessions.md#launch-interface)>
 - Completion context: <original request, governing criteria, repository policy, and instruction establishing any narrower endpoint; executor resolves remaining delivery details>
-- Goal: <bounded objective and the user's explicit request, existing matching Goal, or no Goal; preserve the lead's broader objective>
+- Goal: <assignment-specific objective and source of the user's explicit request, including applicable standing instructions, or no Goal request; receiver verifies its own thread's activation under [Goal guidance](../references/codex.md#goals); preserve the lead's broader objective>
 - Project record and lead: <link/path and session ID, or standalone>
 - Worktree, branch, and revision: <verified identities>
 - Skill file: <installed path matching the explicit skill invocation>
