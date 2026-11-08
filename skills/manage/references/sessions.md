@@ -38,4 +38,8 @@ Include any requested title in the brief and pass it at creation when supported.
 
 ## Retirement
 
-Retire only accepted or transferred assignments, checking descendants and preserving evidence. Archiving, closing tabs, and deleting worktrees are separate operations. Cleanup failure does not undo acceptance.
+The lead owns retirement after accepting a completion report or recording a transfer. Preserve the outcome and evidence in the project record first; confirm no active descendants or unfinished work depend on the session. A completion report alone does not establish acceptance or cleanup authority.
+
+Within established cleanup authority, close the execution session through the selected interface and its installed integration. Verify the recorded identity and preserve unrelated work sharing its resources. Let the integration own closure mechanics, confirmation, and uncertain-result handling.
+
+Record retirement evidence or the blocker and next action in the project record. If the integration is unavailable or closure is unconfirmed, leave cleanup pending. Archiving a session, closing its runtime, and deleting its worktree are separate operations with separate authority and evidence. Cleanup failure does not undo acceptance.
