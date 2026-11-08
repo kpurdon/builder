@@ -4,9 +4,8 @@ Read the final diff against its actual base and verify consequential claims. App
 
 ## Description
 
-- Start with `# Problem`: explain why the change is needed. Link a relevant existing ticket when available, but make the explanation stand alone.
-- Follow with `## Solution`: explain what behavior changes. Use a small verified example when it helps.
-- Keep both short and plain. Include implementation details, tradeoffs, or dependencies only when their omission would hinder review or hide a material consequence. Omit work history and inventories of changed layers or unchanged behavior.
+- Lead with a relevant existing ticket link when available, then a short paragraph explaining the problem and changed behavior. Make the explanation stand alone. Use headings only when they help organize a longer description.
+- Include implementation details, examples, tradeoffs, or dependencies only when they materially help review. Omit work history and inventories of changed layers or unchanged behavior.
 - Honor explicit repository requirements; template headings alone do not make sections mandatory. Omit boilerplate sections, including Docs and Security when they add nothing relevant.
 
 ## Validation
