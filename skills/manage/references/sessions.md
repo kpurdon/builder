@@ -20,6 +20,8 @@ Uncertain launches may already be running: preserve the prompt and reconcile bef
 
 Transfer only after the former writer stops and a named successor accepts the remaining obligations; record that acceptance and unfinished work before the successor writes. Returning coordination to the lead does not transfer execution ownership. Idle sessions retain their assignments.
 
+Executors use [monitor](../../monitor/SKILL.md) for repeated dependency observation. Leads consume the executor's milestone; they do not launch a second watcher for the same dependency.
+
 ## Current-state records
 
 At handoff or a material state change, update owners, prerequisites, decisions, and next actions in the assignment and project record. Distinguish the delivery endpoint from its next milestone; record pending gates and resumption triggers. Replace stale instructions in place, link history separately, and mark unverified state.

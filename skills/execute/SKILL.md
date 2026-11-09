@@ -13,6 +13,8 @@ Begin with investigation or design when needed, then continue through authorized
 
 Retain ownership while awaiting a user gate or dependency, recording the next action and resumption trigger. Keep watching observable dependencies within established authority and stop conditions, then continue authorized work as soon as prerequisites are satisfied. If observation cannot continue, state why and identify who or what will resume the work; do not imply automatic resumption without an established mechanism.
 
+Delegate repeated CI, review-arrival, and rollout observation through [monitor](../monitor/SKILL.md), retaining delivery ownership and interpretation of its results.
+
 For PR descriptions and reviewer handoffs, use the [description guidance](references/pr-description.md). A description-only request ends with draft text unless publication is requested.
 
 For handoff briefs, use [session operations](../manage/references/sessions.md). For delegated work, follow its [completion reporting contract](../manage/references/sessions.md#completion-reporting).
