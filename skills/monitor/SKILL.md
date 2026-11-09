@@ -9,7 +9,7 @@ Use for an observable delivery dependency expected to need repeated checks. Keep
 
 ## Owner
 
-Launch one fresh-context native subagent with the installed role `builder_monitor`, selected through the host's named-agent argument (for example, `agent_type`). Its [agent definition](../../agents/builder_monitor.toml) owns the model, reasoning effort, and worker instructions. Do not supply competing model or effort arguments or change global subagent defaults. The service tier follows the parent.
+Launch one fresh-context native subagent with the installed role `watcher`, selected through the host's named-agent argument (for example, `agent_type`). Its [agent definition](../../agents/watcher.toml) owns the model, reasoning effort, and worker instructions. Do not supply competing model or effort arguments or change global subagent defaults. The service tier follows the parent.
 
 Pass a short assignment: action, exact target, success criteria, deadline, working directory, return destination, and absolute paths to the [helper](scripts/wait.py) and its [contract](references/helpers.md) from this installed package. Do not copy the delivery transcript. The helper paths belong in each assignment so an installed agent does not retain stale plugin-cache paths.
 

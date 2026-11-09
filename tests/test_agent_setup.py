@@ -19,8 +19,8 @@ class AgentSetup(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         self.destination = self.root / 'profile' / 'agents'
-        self.source = self.root / 'builder_monitor.toml'
-        self.source.write_text('name = "builder_monitor"\nmodel = "model-one"\n')
+        self.source = self.root / 'watcher.toml'
+        self.source.write_text('name = "watcher"\nmodel = "model-one"\n')
         self.target = self.destination / self.source.name
 
     def run_action(self, action):
@@ -36,7 +36,7 @@ class AgentSetup(unittest.TestCase):
         self.assertEqual(self.run_action('check'), 'current')
         self.assertEqual(self.run_action('install'), 'current')
         self.assertEqual(self.target.stat().st_mtime_ns, before)
-        self.source.write_text('name = "builder_monitor"\nmodel = "model-two"\n')
+        self.source.write_text('name = "watcher"\nmodel = "model-two"\n')
         self.assertEqual(self.run_action('check'), 'stale')
         self.assertEqual(self.run_action('install'), 'updated')
         self.assertIn('model-two', self.target.read_text())
@@ -46,7 +46,7 @@ class AgentSetup(unittest.TestCase):
         self.run_action('install')
         changed = self.target.read_text().replace('model-one', 'my-local-model')
         self.target.write_text(changed)
-        self.source.write_text('name = "builder_monitor"\nmodel = "model-two"\n')
+        self.source.write_text('name = "watcher"\nmodel = "model-two"\n')
         for action in ['check', 'install', 'remove']:
             self.assertEqual(self.run_action(action), 'modified')
             self.assertEqual(self.target.read_text(), changed)
@@ -66,9 +66,9 @@ class AgentSetup(unittest.TestCase):
             self.assertTrue(self.target.is_symlink())
         self.source.unlink()
         # Keep a source file available at a separate path; the destination link is dangling.
-        alternate = self.root / 'package' / 'builder_monitor.toml'
+        alternate = self.root / 'package' / 'watcher.toml'
         alternate.parent.mkdir()
-        alternate.write_text('name = "builder_monitor"\n')
+        alternate.write_text('name = "watcher"\n')
         self.assertEqual(setup.manage('install', self.destination, alternate)['status'], 'conflict')
         self.assertTrue(self.target.is_symlink())
 

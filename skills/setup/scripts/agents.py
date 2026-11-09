@@ -8,7 +8,7 @@ from pathlib import Path
 import tempfile
 
 
-SOURCE = Path(__file__).resolve().parents[3] / 'agents' / 'builder_monitor.toml'
+SOURCE = Path(__file__).resolve().parents[3] / 'agents' / 'watcher.toml'
 MARKER = b'# builder-managed-sha256: '
 
 

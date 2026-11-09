@@ -1,4 +1,4 @@
-name = "builder_monitor"
+name = "watcher"
 description = "Observe a bounded CI, review-arrival, or rollout dependency and return terminal evidence to its owner."
 model = "gpt-6.1-terra"
 model_reasoning_effort = "low"
