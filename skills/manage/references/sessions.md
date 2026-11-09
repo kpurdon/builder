@@ -4,6 +4,8 @@ For assigned projects, apply the [project management execution boundary](../SKIL
 
 Prepare handoffs with the [brief](../../../templates/handoff.md), linking artifacts rather than transcripts. Use the [selected launch interface](#launch-interface) for authorized launches.
 
+Carry established scope and authority into the brief. Distinguish acceptance evidence from approval gates; a new delivery stage is not itself a user gate. For each gate, identify the concrete action and the restriction, missing authority, or consequential decision requiring user input. Reconcile claimed gates with the original request and current governing instructions; continue covered work, including bounded validation, without renewed approval.
+
 ## Receiver selection
 
 Continue the verified current owner when a delivery advances stages or resumes after a wait. Use fresh sessions for new deliveries unless the user selects an existing thread; matching titles or idle status are insufficient evidence of ownership. User-selected threads need identity and scope checks, not recent ownership evidence.
