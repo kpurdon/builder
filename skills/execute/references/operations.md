@@ -18,4 +18,4 @@ Distinguish restoration, cause, durable repair, and remaining recovery. Reconcil
 
 Prepare human-run commands and queries for the actual client and target. Use available context; ask when either is unknown. Explain client or connection limits, including session settings that may not survive separate submissions.
 
-Preserve useful existing content and verify saved behavior, including representative queries and rendering. Investigate unexpected readback before retrying. Apply [Datadog guidance](../../investigate/references/datadog.md) where relevant.
+Preserve useful existing content and verify saved behavior, including representative queries and rendering. Investigate unexpected readback before retrying. For Datadog artifacts, use [Datadog guidance](../../investigate/references/datadog.md).

@@ -1,6 +1,6 @@
 # PR descriptions
 
-Read the final diff against its actual base and verify consequential claims. Apply the shared [quality and evidence standards](../../../references/quality.md).
+Read the final diff against its actual base and verify consequential claims.
 
 ## Description
 
@@ -24,7 +24,7 @@ Put screenshots and other meaningful evidence beyond routine PR checks inside on
 </details>
 ```
 
-Use the shared [visual evidence guidance](../../../references/quality.md#presenting-validation-evidence) for captures. Explain what the evidence demonstrates and where it came from; mention limitations only when they affect interpretation or a review decision. For non-routine pre-merge checks, state the expected or observed result and distinguish pending from completed. Links support the explanation rather than replace it.
+When including validation evidence, use the shared [evidence guidance](../../../references/quality.md#presenting-validation-evidence). Explain what the evidence demonstrates and where it came from; mention limitations only when they affect interpretation or a review decision. For non-routine pre-merge checks, state the expected or observed result and distinguish pending from completed. Links support the explanation rather than replace it.
 
 Omit routine test results and counts, command inventories, lint/typecheck results, and CI status. Omit Validation when there is no meaningful evidence or non-routine pre-merge check to include. Post-merge validation, rollout, and other future work belong in the tracker; do not create or change tracking records without authorization.
 

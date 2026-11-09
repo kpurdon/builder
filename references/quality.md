@@ -1,7 +1,5 @@
 # Quality and evidence
 
-Run required checks; add tests or documentation for concrete uncovered needs. Reassess affected evidence after fixes.
-
 ## Linking sources and evidence
 
 Link consequential claims to inspectable original sources with enough context to reproduce and interpret them. Summaries and landing pages do not substitute for evidence. Disclose missing sources or access; retain original captures when live data cannot be revisited.
