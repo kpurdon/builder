@@ -13,8 +13,11 @@ Describe the task naturally or invoke a skill by name. `setup` requires explicit
 | [investigate](skills/investigate/SKILL.md) | Explain unexpected behavior, impact, and likely causes. | “Why did API latency double?”<br>“Investigate the increase in storage costs.” |
 | [validate](skills/validate/SKILL.md) | Check acceptance for a specific revision and environment. | “Verify this revision meets the staging acceptance criteria.”<br>“Confirm the fix eliminates duplicate jobs.” |
 | [review](skills/review/SKILL.md) | Assess changes, verify findings, and identify gaps in review coverage. | “Check whether these bot findings are real.”<br>“Review this migration against the agreed compatibility constraints.”<br>“Review these instructions for contradictions.” |
+| [collect](skills/collect/SKILL.md) | Gather CI failure evidence for the owner. | “Collect failed-job logs and exact-head evidence for this PR.” |
 | [monitor](skills/monitor/SKILL.md) | Delegate bounded dependency waits to Terra/low. | “Watch CI for this head and return when it finishes.”<br>“Wait for this revision to reach staging.” |
 
 Monitoring uses the native `watcher` role. Builder owns its [agent definition](agents/watcher.toml), including model settings, and its polling helpers; the skill owns delegation and delivery handback. [Setup](skills/setup/references/agents.md) installs and refreshes the role in a Codex agent directory while preserving local edits. Plugin updates alone do not update this separate registration. Hosts without named-role selection use a disclosed local-helper fallback. The owner handles findings and runtime acceptance.
 
 Run helper regression tests with `python3 -m unittest discover -s tests -v`.
+
+The native [collector](agents/collector.toml) gathers CI failure evidence with the same setup lifecycle. Its skill delegates by role name; model settings remain in the agent TOML.

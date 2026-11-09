@@ -83,18 +83,33 @@ class AgentSetup(unittest.TestCase):
 
     def test_real_cli_installs_bundled_definition_and_reports_drift(self):
         def invoke(action):
-            p = subprocess.run([sys.executable, str(SCRIPT), action, '--agents-dir', str(self.destination)],
+            p = subprocess.run([sys.executable, str(SCRIPT), action, '--agent', 'watcher', '--agents-dir', str(self.destination)],
                                capture_output=True, text=True, check=False)
             return p.returncode, json.loads(p.stdout)
         code, outcome = invoke('check')
         self.assertEqual((code, outcome['status']), (1, 'missing'))
         code, outcome = invoke('install')
         self.assertEqual((code, outcome['status']), (0, 'installed'))
-        self.assertTrue(self.target.read_bytes().endswith(setup.SOURCE.read_bytes()))
+        self.assertTrue(self.target.read_bytes().endswith(setup.SOURCES['watcher'].read_bytes()))
         self.assertEqual(invoke('check')[0], 0)
         self.target.write_text(self.target.read_text() + '\n# user edit\n')
         code, outcome = invoke('install')
         self.assertEqual((code, outcome['status']), (1, 'modified'))
+
+
+    def test_multi_role_install_reports_conflicts_without_overwriting(self):
+        self.run_action('install')
+        self.target.write_text(self.target.read_text() + '\n# local customization\n')
+        original = self.target.read_bytes()
+        result = subprocess.run([sys.executable, str(SCRIPT), 'install', '--agents-dir', str(self.destination)],
+                                capture_output=True, text=True)
+        outcome = json.loads(result.stdout)
+        self.assertEqual(result.returncode, 1)
+        self.assertEqual(outcome['status'], 'needs_attention')
+        self.assertEqual({a['agent']: a['status'] for a in outcome['agents']},
+                         {'watcher': 'modified', 'collector': 'installed'})
+        self.assertEqual(self.target.read_bytes(), original)
+        self.assertTrue((self.destination/'collector.toml').exists())
 
 
 if __name__ == '__main__':

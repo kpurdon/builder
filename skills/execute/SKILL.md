@@ -15,6 +15,8 @@ Retain ownership while awaiting a user gate or dependency, recording the next ac
 
 Delegate repeated CI, review-arrival, and rollout observation through [monitor](../monitor/SKILL.md), retaining delivery ownership and interpretation of its results.
 
+When CI fails, use [collect](../collect/SKILL.md) for substantial evidence gathering before diagnosing or fixing it.
+
 For PR descriptions and reviewer handoffs, use the [description guidance](references/pr-description.md). A description-only request ends with draft text unless publication is requested.
 
 For handoff briefs, use [session operations](../manage/references/sessions.md). For delegated work, follow its [completion reporting contract](../manage/references/sessions.md#completion-reporting).

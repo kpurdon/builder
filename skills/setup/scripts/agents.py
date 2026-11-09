@@ -8,7 +8,8 @@ from pathlib import Path
 import tempfile
 
 
-SOURCE = Path(__file__).resolve().parents[3] / 'agents' / 'watcher.toml'
+AGENTS = Path(__file__).resolve().parents[3] / 'agents'
+SOURCES = {name: AGENTS / (name + '.toml') for name in ['watcher', 'collector']}
 MARKER = b'# builder-managed-sha256: '
 
 
@@ -31,7 +32,7 @@ def inspect(target, source):
     return ('current' if payload == source else 'stale'), content
 
 
-def manage(action, agents_dir, source_path=SOURCE):
+def manage(action, agents_dir, source_path):
     source = source_path.read_bytes()
     target = agents_dir / source_path.name
     status, previous = inspect(target, source)
@@ -74,13 +75,22 @@ def main():
     parser.add_argument('action', choices=['check', 'install', 'remove'])
     parser.add_argument('--agents-dir', type=Path, required=True,
                         help='Explicit user CODEX_HOME/agents or project .codex/agents directory')
+    parser.add_argument('--agent', choices=SOURCES, action='append',
+                        help='Select a role; repeat as needed. Defaults to all bundled roles.')
     args = parser.parse_args()
-    try:
-        outcome = manage(args.action, args.agents_dir.expanduser().absolute())
-    except OSError as exc:
-        outcome = {'status': 'error', 'reason': str(exc)}
-    print(json.dumps(outcome))
-    return 0 if outcome['status'] in {'current', 'installed', 'updated', 'removed'} else 1
+    outcomes = []
+    for name in dict.fromkeys(args.agent or SOURCES):
+        try:
+            outcome = manage(args.action, args.agents_dir.expanduser().absolute(), SOURCES[name])
+        except OSError as exc:
+            outcome = {'status': 'error', 'reason': str(exc)}
+        outcomes.append({'agent': name, **outcome})
+    # Keep the single-role response useful when an agent is selected explicitly.
+    success = all(item['status'] in {'current', 'installed', 'updated', 'removed'} for item in outcomes)
+    print(json.dumps(outcomes[0] if len(outcomes) == 1 else
+                     {'status': 'ok' if success else 'needs_attention', 'agents': outcomes}))
+    return 0 if success else 1
+
 
 
 if __name__ == '__main__':
