@@ -14,7 +14,7 @@ Local edits, including model overrides, are preserved and reported as `modified`
 
 ## Runtime readiness
 
-File installation is not runtime proof. Start a fresh session in the intended client and verify that its native spawn tool exposes named roles and discovers `watcher`. Test selection by role name, without explicit model or effort overrides, then verify the child's runtime model and effort against the installed TOML. Use a bounded synthetic wait before relying on monitoring. A role name or agent self-report is not sufficient evidence.
+File installation is not runtime proof. Start a fresh session in the intended client and verify that its native spawn tool exposes named roles and discovers `watcher`. Test selection by role name, without explicit model or effort overrides, then verify the child's runtime model and effort against the installed TOML. Use a bounded synthetic observation before relying on monitoring. A role name or agent self-report is not sufficient evidence.
 
 Some clients expose only explicit model overrides and no named-role selector. Mark named-agent monitoring unavailable there; do not copy model parameters into skill prose, silently substitute a generic agent, or change runtime feature flags. The owner may perform the bounded observation locally through the selected interface with a disclosed fallback. For MCP monitoring, verify that the worker also exposes the assigned server and read tools; role discovery alone does not establish integration access. Check user and project scopes for a shadowing role when discovery or runtime settings differ from the installed definition.
 
