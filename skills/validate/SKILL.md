@@ -7,6 +7,6 @@ description: Verify an agreed outcome for a specific revision and environment.
 
 Follow the [working agreement](../../references/working-agreement.md).
 
-Establish which acceptance criteria hold, fail, or remain unverified; do not narrow them to fit results. Use relevant [operations](../execute/references/operations.md) and [Datadog guidance](../investigate/references/datadog.md).
+Establish which acceptance criteria hold, fail, or remain unverified; do not narrow them to fit results. For rollout or recovery validation and operational artifact checks, use [operational procedures](../execute/references/operations.md). For Datadog work, use [Datadog guidance](../investigate/references/datadog.md).
 
-Return reproducible failures to their owner, using [investigate](../investigate/SKILL.md) when needed. Verify corrected revisions; the delivery owner uses this evidence to establish completion. The project lead reconciles completed deliveries against the overall outcome.
+Investigate failures as needed and return reproducible failures to their owner. Verify corrected revisions; the delivery owner uses this evidence to establish completion. The project lead reconciles completed deliveries against the overall outcome.

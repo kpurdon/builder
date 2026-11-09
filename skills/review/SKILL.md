@@ -15,4 +15,4 @@ Verify findings against the current change and surrounding behavior. Distinguish
 
 Review material risks left uncovered by existing evidence, using available review capabilities when useful. Request focused follow-up when changes invalidate earlier findings or coverage; do not repeat a generic review solely because a different tool produced it. Assess PR clarity and rendered evidence when they affect understanding or support a claim, using the [PR-description guidance](../execute/references/pr-description.md).
 
-Return actionable findings with their triggering conditions, impact, and supporting evidence, plus material coverage limits. Leave fixes and required follow-up to the [delivery owner](../execute/SKILL.md); review findings do not establish [runtime acceptance](../validate/SKILL.md).
+Return actionable findings with their triggering conditions, impact, and supporting evidence, plus material coverage limits. Leave fixes and required follow-up to the delivery owner; review findings do not establish runtime acceptance.

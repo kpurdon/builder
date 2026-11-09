@@ -7,4 +7,4 @@ description: Inspect builder readiness without changing configuration or launchi
 
 Follow the [working agreement](../../references/working-agreement.md).
 
-Check installed skills and available [host capabilities](../../references/codex.md). Check the selected session integration and [Datadog](../investigate/references/datadog.md) prerequisites only when relevant. Report gaps and the smallest useful next action.
+Check installed skills and the capabilities needed for the requested workflow. For Goal or session/worktree readiness, use [Codex controls](../../references/codex.md); for session readiness, inspect the selected integration. For Datadog readiness, use [Datadog guidance](../investigate/references/datadog.md). Report gaps and the smallest useful next action.

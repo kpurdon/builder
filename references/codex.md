@@ -1,6 +1,6 @@
 # Codex capabilities
 
-Prefer available native controls over custom orchestration, subject to the [launch interface](../skills/manage/references/sessions.md#launch-interface); host instructions govern their use.
+Prefer available native controls over custom orchestration; host instructions govern their use. For session launches, follow the [launch interface](../skills/manage/references/sessions.md#launch-interface).
 
 ## Goals
 
@@ -12,4 +12,4 @@ Carry the user's Goal request and assignment-specific objective into [handoffs](
 
 ## Sessions and worktrees
 
-Use [session operations](../skills/manage/references/sessions.md) for ownership and handoffs. Reuse suitable worktrees or isolate changes from the intended base. Native tasks and external launchers must not create duplicate executors for one assignment.
+For session assignment, handoff, or retirement, use [session operations](../skills/manage/references/sessions.md). Reuse suitable worktrees or isolate changes from the intended base. Native tasks and external launchers must not create duplicate executors for one assignment.
