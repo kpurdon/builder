@@ -12,7 +12,7 @@ Use builder's $<assigned-skill> for this assignment. Read its verified skill fil
 - Runtime: <Codex defaults or explicit model/profile/permission choices; no assumed parent inheritance>
 - Decisions and prerequisites: <settled decisions, open questions for the receiver to investigate or design, usable dependencies, and pending gates with next actions and resumption triggers>
 - Work and checks: <linked evidence and gaps per the [evidence guidance](../references/quality.md#linking-sources-and-evidence); preserve unrelated changes>
-- Authority and constraints: <grants, exclusions, shared-resource owners>
+- Authority and constraints: <established grants and exclusions with sources; each user gate's concrete action and restriction, missing authority, or consequential decision; shared-resource owners>
 - Receiver selection: <current owner thread and selection basis under the [receiver rules](../skills/manage/references/sessions.md#receiver-selection); for transfer, successor acceptance of remaining obligations>
 - Launch ID: <lead-assigned correlation ID, if managed>
 - Launch destination: <selected interface and its verified destination identifiers; reason for any requested separation>
