@@ -1,5 +1,7 @@
 # Wait helpers
 
+For rollout assignments, select the configured delivery integration first; see [Akuity MCP](akuity.md). The `rollout` command below is a direct Kubernetes Deployment adapter, not the watcher's general workload support boundary.
+
 Run `python3 <monitor-skill>/scripts/wait.py <action> ...` from the assigned working directory. Requires Python 3.10+, plus authenticated `gh` for GitHub or `kubectl` for Kubernetes. Helpers perform reads only and keep polling outside the model. They emit one terminal JSON record. `--timeout` is a required number of seconds; `--interval` defaults to 30 seconds. Each external command is bounded by the remaining deadline and at most 30 seconds. Cancel with SIGINT or SIGTERM; do not abandon a running helper.
 
 | Action | Required target and criteria | Evidence returned |
