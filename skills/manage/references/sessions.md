@@ -20,7 +20,7 @@ Uncertain launches may already be running: preserve the prompt and reconcile bef
 
 Transfer only after the former writer stops and a named successor accepts the remaining obligations; record that acceptance and unfinished work before the successor writes. Returning coordination to the lead does not transfer execution ownership. Idle sessions retain their assignments.
 
-Executors use [monitor](../../monitor/SKILL.md) for repeated dependency observation. Leads consume the executor's milestone; they do not launch a second watcher for the same dependency.
+Executors use [monitor](../../monitor/SKILL.md) for repeated dependency observation. Leads do not launch a second watcher for the same dependency or request milestone reports.
 
 ## Current-state records
 
@@ -30,9 +30,9 @@ Linear and other external trackers are not session coordination logs. Add narrat
 
 ## Completion reporting
 
-Executors report completion once to the return destination with the assignment, outcome, artifacts or revision, and acceptance evidence; include session IDs only when needed to identify the owner. Otherwise, message another session only when new information changes its next action: a dependency is usable, a shared conflict needs resolution, or scope or ownership must change. State the needed action and relevant evidence. Do not send acknowledgements, unchanged-state reminders, routine progress, or repeated handbacks; leads do not poll owners for status or require intermediate approvals.
+Work independently within the assignment. Report completion once to the return destination with the outcome, artifacts or revision, and acceptance evidence. Before completion, contact another execution session only when blocked and unable to proceed without its action; normally bring the blocker and needed action to the lead. Routine progress, dependency availability, and milestones do not need messages. Leads do not poll owners, require acknowledgements or intermediate approvals, or relay updates between executors.
 
-Executors present concrete merge or approval requests directly to the user and bring blockers needing an unavailable decision, authority, or outside help to the user first. Involve the lead for a concrete dependency between assignments, naming the needed action. A ready PR, unavailable permission, or completed set of available checks does not end ownership when acceptance remains open. Leads may relay material scope changes without repeatedly prompting active owners.
+Executors present concrete merge or approval requests directly to the user and bring blockers needing an unavailable decision, authority, or outside help to the user first. A ready PR, unavailable permission, or completed set of available checks does not end ownership when acceptance remains open. Leads contact active owners only to resolve a blocker or convey a necessary change to or cancellation of the assignment.
 
 Use permitted native messaging for session reports. If unavailable, keep the report in the executor's final response and disclose that it could not be delivered; do not use a tracker as a fallback message bus. Reconcile on concrete failure evidence; silence alone is insufficient.
 
