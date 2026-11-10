@@ -1,10 +1,12 @@
-# Akuity rollout observation
+# Kargo and Argo CD rollout observation
 
-Use the existing authenticated Akuity MCP connection when it is the user's configured rollout interface. Discover the tools and their current input schemas in the worker's client; server prefixes and available tools vary by endpoint and permissions. The watcher reports authentication failures to the owner, who handles [login refresh](#login-refresh) before resuming observation. Do not build a separate API client or install a connection as part of a watch. Missing access is an explicit readiness gap, not a reason to silently switch to pod polling.
+Use the user's configured delivery MCP connection. A direct Kargo or Argo CD endpoint does not require the Akuity platform plugin; choose by the assigned resource and available access. Discover the tools and their current input schemas in the worker's client; server prefixes and available tools vary by endpoint and permissions. The watcher reports authentication failures to the owner, who handles [login refresh](#login-refresh) before resuming observation. Do not build a separate API client or install a connection as part of a watch. Missing access is an explicit readiness gap, not a reason to silently switch to pod polling.
 
 ## Login refresh
 
-During authorized work, the delivery owner may refresh authentication for the existing server and account without asking for additional permission: `codex mcp login <configured-server-name>` for MCP, or `kargo login https://<kargo-host> --sso` for the CLI. A bare `kargo login` can reuse a previously saved server and method after confirming they match the assignment. This permits normal login and token refresh, not changing accounts, granting broader scopes, or creating new connections. If browser SSO or MFA needs the user, launch the flow and explain the required interaction; do not treat it as another permission request.
+Before refreshing credentials, try one scoped read through the assigned connection. A status badge or cached tool list alone does not establish authentication failure or success. If the read succeeds despite an authentication warning, report the discrepancy; do not reset working credentials. Diagnose a failing client or session separately from a working one.
+
+The [working agreement](../../../references/working-agreement.md) authorizes routine reauthentication by the delivery owner. For MCP, run `codex mcp login <configured-server-name>` against the affected client's `CODEX_HOME`; for the CLI, use `kargo login https://<kargo-host> --sso`. A bare `kargo login` can reuse a previously saved server and method after confirming they match the assignment.
 
 MCP and CLI credentials are separate. Verify a successful login with a scoped read through the interface being used, then resume the same target within its remaining deadline. Do not repeatedly retry a rejected login without a concrete correction. If login remains blocked or the deadline expires, report the blocker or timeout instead of implying that observation is continuing.
 
