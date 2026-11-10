@@ -24,15 +24,17 @@ Executors use [monitor](../../monitor/SKILL.md) for repeated dependency observat
 
 ## Current-state records
 
-At handoff or a material state change, update owners, prerequisites, decisions, and next actions in the assignment and project record. Distinguish the delivery endpoint from its next milestone; record pending gates and resumption triggers. Replace stale instructions in place, link history separately, and mark unverified state.
+Keep session bookkeeping in one local project record, separate from the external issue or project. Update it when ownership, prerequisites, acceptance, or the next action changes; avoid duplicating updates across briefs and records. Distinguish the delivery endpoint from its next milestone, retain pending gates and resumption triggers, and replace stale state in place.
+
+Linear and other external trackers are not session coordination logs. Add narrative updates only for consequential decisions that future work needs, with the reason and affected scope; update authorized issue fields when actual project state changes. Keep launch IDs, acknowledgements, progress, waits, watcher output, and retirement details local. Tracker-maintenance authority does not require a post for each event. The lead records a shared decision once on the relevant issue; executors do not mirror it across tickets.
 
 ## Completion reporting
 
-Executors report completion to the return destination with assignment, launch, and thread IDs; the outcome reached; artifacts or revision; and acceptance evidence. Label intermediate results as milestones or waits, with the retained owner and next action. Send event-driven milestones when they unblock dependent work; leads do not poll for status or require startup acknowledgements, routine progress reports, or intermediate approvals.
+Executors report completion once to the return destination with the assignment, outcome, artifacts or revision, and acceptance evidence; include session IDs only when needed to identify the owner. Otherwise, message another session only when new information changes its next action: a dependency is usable, a shared conflict needs resolution, or scope or ownership must change. State the needed action and relevant evidence. Do not send acknowledgements, unchanged-state reminders, routine progress, or repeated handbacks; leads do not poll owners for status or require intermediate approvals.
 
 Executors present concrete merge or approval requests directly to the user and bring blockers needing an unavailable decision, authority, or outside help to the user first. Involve the lead for a concrete dependency between assignments, naming the needed action. A ready PR, unavailable permission, or completed set of available checks does not end ownership when acceptance remains open. Leads may relay material scope changes without repeatedly prompting active owners.
 
-Use permitted native messaging or the authorized governing record. If neither is available, keep the report in the executor's final response and disclose that it could not be delivered. Reconcile on concrete failure evidence; silence alone is insufficient.
+Use permitted native messaging for session reports. If unavailable, keep the report in the executor's final response and disclose that it could not be delivered; do not use a tracker as a fallback message bus. Reconcile on concrete failure evidence; silence alone is insufficient.
 
 ## Launch interface
 

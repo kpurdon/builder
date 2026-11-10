@@ -1,8 +1,10 @@
 # Project: <name>
 
+Keep this local coordination record separate from the external tracker, following [record maintenance](../skills/manage/references/sessions.md#current-state-records).
+
 ## Outcome
 
-- Governing record: <project, issue, or this file>
+- Governing scope and acceptance: <external project or issue link, or this file>
 - Problem and users: <why this matters>
 - Scope and exclusions: <accepted outcomes and boundaries>
 - Acceptance criteria and finish line: <observable behavior, environment, evidence, and governing instruction for any narrower endpoint>
