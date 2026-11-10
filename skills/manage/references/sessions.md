@@ -20,29 +20,33 @@ Uncertain launches may already be running: preserve the prompt and reconcile bef
 
 Transfer only after the former writer stops and a named successor accepts the remaining obligations; record that acceptance and unfinished work before the successor writes. Returning coordination to the lead does not transfer execution ownership. Idle sessions retain their assignments.
 
-Executors use [monitor](../../monitor/SKILL.md) for repeated dependency observation. Leads consume the executor's milestone; they do not launch a second watcher for the same dependency.
+Executors use [monitor](../../monitor/SKILL.md) for repeated dependency observation. Leads do not launch a second watcher for the same dependency or request milestone reports.
 
 ## Current-state records
 
-At handoff or a material state change, update owners, prerequisites, decisions, and next actions in the assignment and project record. Distinguish the delivery endpoint from its next milestone; record pending gates and resumption triggers. Replace stale instructions in place, link history separately, and mark unverified state.
+Keep session bookkeeping in one local project record, separate from the external issue or project. Update it when ownership, prerequisites, acceptance, or the next action changes; avoid duplicating updates across briefs and records. Distinguish the delivery endpoint from its next milestone, retain pending gates and resumption triggers, and replace stale state in place.
 
-## Completion reporting
+Linear and other external trackers are not session coordination logs. Add narrative updates only for consequential decisions that future work needs, with the reason and affected scope; update authorized issue fields when actual project state changes. Keep launch IDs, acknowledgements, progress, waits, watcher output, and retirement details local. Tracker-maintenance authority does not require a post for each event. The lead records a shared decision once on the relevant issue; executors do not mirror it across tickets.
 
-Executors report completion to the return destination with assignment, launch, and thread IDs; the outcome reached; artifacts or revision; and acceptance evidence. Label intermediate results as milestones or waits, with the retained owner and next action. Send event-driven milestones when they unblock dependent work; leads do not poll for status or require startup acknowledgements, routine progress reports, or intermediate approvals.
+## Delivery state and blockers
 
-Executors present concrete merge or approval requests directly to the user and bring blockers needing an unavailable decision, authority, or outside help to the user first. Involve the lead for a concrete dependency between assignments, naming the needed action. A ready PR, unavailable permission, or completed set of available checks does not end ownership when acceptance remains open. Leads may relay material scope changes without repeatedly prompting active owners.
+Executors work independently, maintain delivery artifacts and authorized ticket state, and leave acceptance evidence with those artifacts. No completion report or acknowledgement to the lead is required. Contact another execution session only when blocked and unable to proceed without its action; normally bring the blocker and needed action to the lead.
 
-Use permitted native messaging or the authorized governing record. If neither is available, keep the report in the executor's final response and disclose that it could not be delivered. Reconcile on concrete failure evidence; silence alone is insufficient.
+When resuming or deciding which work is ready, the lead refreshes the linked tickets, PRs, and acceptance evidence. Assess those sources against the assigned finish line: a Done ticket or merged PR establishes completion only when it satisfies that endpoint. Use a linked local artifact for evidence that has no external home. Do not require a message to accept completed work or unblock a dependency, poll owners for status, or duplicate executor-owned watches.
+
+Executors present concrete merge or approval requests directly to the user and bring blockers needing an unavailable decision, authority, or outside help to the user first. A ready PR, unavailable permission, or completed set of available checks does not end ownership when acceptance remains open. Leads contact active owners only to resolve a blocker or convey a necessary change to or cancellation of the assignment.
+
+Use permitted native messaging for blockers. If unavailable, raise the blocker to the user; do not use a tracker as a fallback message bus. Silence alone is not a reason to contact or replace an owner.
 
 ## Launch interface
 
 Honor the requested or established launch interface and use its installed integration. Otherwise, prefer available native session capabilities. Supply the assignment and retain returned identifiers in the project record. If the selected interface is unavailable, resolve the choice before launching a substitute.
 
-Include any requested title in the brief and pass it at creation when supported. Terminal and native session titles are separate; have the receiver set a requested native title before work and report unavailable title controls at completion.
+Include any requested title in the brief and pass it at creation when supported. Terminal and native session titles are separate; have the receiver set a requested native title before work and record unavailable title controls locally.
 
 ## Retirement
 
-The lead owns retirement after verifying the delivery's acceptance criteria, cancellation of the assignment, or an accepted transfer to a named successor. A milestone report, user gate, or handback to the PM is insufficient. Preserve the outcome, evidence, and any accepted successor obligations in the project record first; confirm no active descendants or unfinished work depend on the session. A completion report alone does not establish acceptance or cleanup authority.
+The lead owns retirement after verifying the delivery's acceptance criteria, cancellation of the assignment, or an accepted transfer to a named successor. An intermediate milestone or pending user gate is insufficient. Preserve the outcome, evidence, and any accepted successor obligations in the project record first; confirm no active descendants or unfinished work depend on the session. Verified acceptance does not itself grant cleanup authority.
 
 Within established cleanup authority, close the execution session through the selected interface and its installed integration. Verify the recorded identity and preserve unrelated work sharing its resources. Let the integration own closure mechanics, confirmation, and uncertain-result handling.
 
