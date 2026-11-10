@@ -17,7 +17,7 @@ Choose the interface from the user's configured integrations and available tools
 
 - [Wait helper](references/helpers.md): CI checks, submitted review arrival, and direct Kubernetes Deployments.
 - [CI evidence helper](references/ci.md): failed-check/job/log collection for an exact GitHub Actions PR head, independently or after a wait.
-- [Akuity MCP](references/akuity.md): Kargo/Argo/Shipit observation through the configured delivery integration, including owner-run [MCP/CLI login refresh](references/akuity.md#login-refresh).
+- [Kargo/Argo CD MCP](references/akuity.md): Kargo/Argo/Shipit observation through the configured delivery integration, including owner-run [MCP/CLI login refresh](references/akuity.md#login-refresh).
 
 The owner retains diagnosis, fixes, decisions, and acceptance. Do other useful work or wait for native completion; do not duplicate the watcher's reads or ask for routine progress. Use its returned evidence before refetching, and narrow any follow-up to the named gap. Stop or retarget the existing watcher when the target changes. Evidence gathered, a review arriving, a promotion succeeding, and runtime acceptance are separate outcomes.
 

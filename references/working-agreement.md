@@ -6,4 +6,6 @@ When ending a work turn, including a handoff or wait, give the user a concise, s
 
 Run required checks; add tests or documentation for concrete uncovered needs. Reassess affected evidence after fixes. Keep user configuration and runtime state outside builder.
 
+During authorized work, the owner may reauthenticate configured MCP connections and CLIs for the existing account and scopes without renewed permission. Launch the normal login flow when needed; request user interaction only for sign-in or MFA steps that cannot be completed automatically. Verify recovery with a scoped read through the affected interface. This does not authorize changing accounts, broadening scopes, or creating connections.
+
 Use [evidence guidance](quality.md) when gathering, evaluating, or presenting findings or validation and acceptance evidence. For PR delivery, use [PR delivery guidance](../skills/execute/references/pr-delivery.md). For iterative execution, project management, or work with Goals, sessions, or worktrees, use [Codex controls](codex.md).
