@@ -16,6 +16,6 @@ Use builder's $<assigned-skill> for this assignment. Read its verified skill fil
 - Receiver selection: <current owner thread and selection basis under the [receiver rules](../skills/manage/references/sessions.md#receiver-selection); for transfer, successor acceptance of remaining obligations>
 - Launch ID: <lead-assigned correlation ID, if managed>
 - Launch destination: <selected interface and its verified destination identifiers; reason for any requested separation>
-- Completion return destination: <lead thread via permitted native messaging; final response if unavailable>
+- Delivery state and evidence: <ticket, PR, and acceptance artifact links or paths the lead can refresh>
 
-Complete the assigned skill's outcome and follow the [completion reporting contract](../skills/manage/references/sessions.md#completion-reporting). For execution assignments, use [delivery completion](../skills/execute/SKILL.md). Include material runtime differences or reporting limitations with the result.
+Complete the assigned skill's outcome and follow the [delivery state and blocker guidance](../skills/manage/references/sessions.md#delivery-state-and-blockers). For execution assignments, use [delivery completion](../skills/execute/SKILL.md).

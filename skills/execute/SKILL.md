@@ -17,6 +17,6 @@ Delegate bounded observation and evidence gathering through [monitor](../monitor
 
 For PR descriptions and reviewer handoffs, use the [description guidance](references/pr-description.md). A description-only request ends with draft text unless publication is requested.
 
-For handoff briefs, use [session operations](../manage/references/sessions.md). For delegated work, follow its [completion reporting contract](../manage/references/sessions.md#completion-reporting).
+For handoff briefs, use [session operations](../manage/references/sessions.md). For managed deliveries, follow its [delivery state and blocker guidance](../manage/references/sessions.md#delivery-state-and-blockers).
 
 For interventions, rollout, recovery, or operational artifacts, use [operational procedures](references/operations.md). For Datadog work, use [Datadog guidance](../investigate/references/datadog.md). Investigate unexpected results.
