@@ -30,7 +30,9 @@ Linear and other external trackers are not session coordination logs. Add narrat
 
 ## Delivery state and blockers
 
-Executors work independently, maintain delivery artifacts and authorized ticket state, and leave acceptance evidence with those artifacts. No completion report or acknowledgement to the lead is required. Contact another execution session only when blocked and unable to proceed without its action; normally bring the blocker and needed action to the lead.
+Executors work independently, maintain delivery artifacts and authorized ticket state, and leave acceptance evidence with those artifacts. No completion report or acknowledgement to the lead is required.
+
+Shared files or nearby work alone do not require coordination. Inspect available code, diffs, PRs, and assignment records; use isolated worktrees and resolve merge conflicts during integration. Do not ask other sessions to confirm prospective edits or file ownership. Contact another execution session only when blocked and unable to proceed without its action, naming the blocked operation and specific action needed; normally bring that blocker to the lead. Continue work that does not depend on the reply.
 
 When resuming or deciding which work is ready, the lead refreshes the linked tickets, PRs, and acceptance evidence. Assess those sources against the assigned finish line: a Done ticket or merged PR establishes completion only when it satisfies that endpoint. Use a linked local artifact for evidence that has no external home. Do not require a message to accept completed work or unblock a dependency, poll owners for status, or duplicate executor-owned watches.
 
