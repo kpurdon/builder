@@ -16,7 +16,7 @@ For visible changes:
 - Show a readable region with enough context to interpret it and link originals. Link full-size images when compact captures are unavailable.
 - Identify each capture's environment and revision, and label synthetic fixtures.
 
-Include relevant evidence in PRs, keep captures outside tracked source, and verify published artifacts. Reconcile partial upload success before retrying.
+For PRs, use the [description guidance](../skills/execute/references/pr-description.md) to select and place evidence. Keep captures outside tracked source and verify published artifacts. Reconcile partial upload success before retrying.
 
 ## Operational evidence
 
