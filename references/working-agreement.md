@@ -2,7 +2,7 @@
 
 Use judgment to reach the agreed outcome; switch skills without unnecessary phases or handoffs. Keep remaining work and ownership explicit.
 
-At the start of substantial work involving multiple steps, iteration, or waits, apply the [Goal procedure](codex.md#goals). Check for an applicable standing Goal request before waiting for the user to enable one manually.
+Start or reuse a Goal for substantial work under the user's applicable standing or task-specific Goal request. Activate it before substantive work using the [Goal procedure](codex.md#goals); do not wait for the user to enable it manually.
 
 When ending a work turn, including a handoff or wait, give the user a concise, self-contained summary of the current outcome and any action needed from them, or say none is needed. Repeat relevant direct links to PRs, issues, and artifacts even when shared earlier, identifying each PR's purpose and state. Put this information before supporting detail; natural prose or short bullets are both suitable. When work remains, name its owner, next action, and any resumption trigger, making clear whether work is active or awaiting resumption. Distinguish delivery stages and unverified outcomes using the evidence guidance below.
 
