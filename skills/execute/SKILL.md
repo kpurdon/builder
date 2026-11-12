@@ -15,7 +15,7 @@ Retain ownership while awaiting a user gate or dependency, recording the next ac
 
 Delegate bounded observation and evidence gathering through [monitor](../monitor/SKILL.md), including CI, review feedback, rollout state, and relevant logs. Retain diagnosis, delivery ownership, and interpretation of the results.
 
-For PR descriptions and reviewer handoffs, use the [description guidance](references/pr-description.md). A description-only request ends with draft text unless publication is requested.
+Before creating or editing a PR body, read the [description guidance](references/pr-description.md), including when updating an existing PR during delivery. Apply it to reviewer handoffs too. A description-only request ends with draft text unless publication is requested.
 
 For handoff briefs, use [session operations](../manage/references/sessions.md). For cross-session dependencies and managed deliveries, follow its [delivery state and blocker guidance](../manage/references/sessions.md#delivery-state-and-blockers).
 
