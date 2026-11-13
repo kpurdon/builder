@@ -52,4 +52,6 @@ The lead owns retirement after verifying the delivery's acceptance criteria, can
 
 Within established cleanup authority, close the execution session through the selected interface and its installed integration. Verify the recorded identity and preserve unrelated work sharing its resources. Let the integration own closure mechanics, confirmation, and uncertain-result handling.
 
+After the last execution session retires, dissolve its project group through the selected integration if only the lead's session remains and the integration supports preserving it. Keep the lead open; this is presentation cleanup, not project completion. Record the dissolved group ID as retired, retain the lead's origin and group name, and recreate the group around that origin on the next launch. Leave groups containing other sessions intact.
+
 Record retirement evidence or the blocker and next action in the project record. If the integration is unavailable or closure is unconfirmed, leave cleanup pending. Archiving a session, closing its runtime, and deleting its worktree are separate operations with separate authority and evidence. Cleanup failure does not undo acceptance.
