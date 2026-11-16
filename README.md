@@ -19,4 +19,4 @@ Observation and evidence gathering use one native `watcher` role, with examples 
 
 Run helper regression tests with `python3 -m unittest discover -s tests -v`.
 
-Managed initiatives use explicit session membership independent of directories and UI groups. [Session operations](skills/manage/references/sessions.md) define ownership and interface selection; a selected integration such as [Dispatcher](https://github.com/kpurdon/dispatcher) owns native mechanics and its local registry. Broad discovery can stay in a parent workspace while repository-specific executors use isolated worktrees as scope becomes known.
+Managed initiatives use explicit session membership independent of directories and UI groups. [Session operations](skills/manage/references/sessions.md) define ownership and interface selection; a selected integration such as [dispatcher](https://github.com/kpurdon/dispatcher) owns native mechanics and its local registry. Broad discovery can stay in a parent workspace while repository-specific executors use isolated worktrees as scope becomes known.

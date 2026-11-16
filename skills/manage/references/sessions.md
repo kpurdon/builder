@@ -14,7 +14,7 @@ Continue the verified current owner when a delivery advances stages or resumes a
 
 Launch only within established authority; a brief-only request does not authorize a launch. A delegated launcher owns one launch, not delivery or further handoffs.
 
-Give each managed initiative a stable ID and one authoritative membership inventory, independent of UI grouping. With a scoped integration such as Dispatcher, keep its registry outside repositories and reference it from the [project record](../../../templates/project.md); do not duplicate member lists there. Record the lead's verified native identity. Without such an integration, the project record owns the explicit member inventory; never reconstruct it by searching all sessions.
+Give each managed initiative a stable ID and one authoritative membership inventory, independent of UI grouping. With a scoped integration such as dispatcher, keep its registry outside repositories and reference it from the [project record](../../../templates/project.md); do not duplicate member lists there. Record the lead's verified native identity. Without such an integration, the project record owns the explicit member inventory; never reconstruct it by searching all sessions.
 
 Before dispatch, assign one owner and reserve the assignment through the selected integration. Carry initiative, member, request, registry, and lead references into the brief. Keep backend, native conversation, terminal, and UI group IDs distinct. Record launch, grouping, startup, and delivery evidence separately; leave unobserved startup unconfirmed. Silence or queued messages prove neither success nor failure.
 
