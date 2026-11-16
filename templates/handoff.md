@@ -7,6 +7,7 @@ Use builder's $<assigned-skill> for this assignment. Read its verified skill fil
 - Completion context: <original request, governing criteria, repository policy, and instruction establishing any narrower endpoint; executor resolves remaining delivery details>
 - Goal: <assignment-specific objective and source of the user's explicit request, including applicable standing instructions, or no Goal request; receiver verifies its own thread's activation under [Goal guidance](../references/codex.md#goals); preserve the lead's broader objective>
 - Local project record and lead: <path and session ID, or standalone>
+- Initiative membership: <initiative, member and request IDs; registry/inventory and integration; verified lead identity, or standalone>
 - Worktree, branch, and revision: <verified identities>
 - Skill file: <installed path matching the explicit skill invocation>
 - Runtime: <Codex defaults or explicit model/profile/permission choices; no assumed parent inheritance>

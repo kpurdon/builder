@@ -14,9 +14,13 @@ Continue the verified current owner when a delivery advances stages or resumes a
 
 Launch only within established authority; a brief-only request does not authorize a launch. A delegated launcher owns one launch, not delivery or further handoffs.
 
-Before dispatch, assign one owner and record the assignment, owner, and launch ID in the [project record](../../../templates/project.md). Keep native thread and terminal IDs distinct. Record launch, grouping, startup, and delivery evidence separately; leave unobserved startup unconfirmed. Silence or queued messages prove neither success nor failure.
+Give each managed initiative a stable ID and one authoritative membership inventory, independent of UI grouping. With a scoped integration such as dispatcher, keep its registry outside repositories and reference it from the [project record](../../../templates/project.md); do not duplicate member lists there. Record the lead's verified native identity. Without such an integration, the project record owns the explicit member inventory; never reconstruct it by searching all sessions.
 
-Uncertain launches may already be running: preserve the prompt and reconcile before retrying. Correlation IDs do not deduplicate. Repair only the failed part of a partially accepted launch.
+Before dispatch, assign one owner and reserve the assignment through the selected integration. Carry initiative, member, request, registry, and lead references into the brief. Keep backend, native conversation, terminal, and UI group IDs distinct. Record launch, grouping, startup, and delivery evidence separately; leave unobserved startup unconfirmed. Silence or queued messages prove neither success nor failure.
+
+List, inspect, message, and retire initiative members through that inventory and the selected integration's scope checks. A shared repository, directory, title, PR, or UI group does not establish membership. Adopt an existing session only with explicit user selection or an authorized transfer and verified native identity. A concrete dependency blocker involving an outside owner permits only the established blocker interaction; it does not grant management authority over their session.
+
+Uncertain launches may already be running: preserve the prompt, original request, and returned IDs and reconcile on the same backend before retrying. Follow the integration's replay contract; correlation IDs alone do not deduplicate. Repair only the failed part of a partially accepted launch. Never create another executor by switching backend, request key, or assignment label to bypass uncertainty.
 
 Transfer only after the former writer stops and a named successor accepts the remaining obligations; record that acceptance and unfinished work before the successor writes. Returning coordination to the lead does not transfer execution ownership. Idle sessions retain their assignments.
 
@@ -24,7 +28,7 @@ Executors use [monitor](../../monitor/SKILL.md) for repeated dependency observat
 
 ## Current-state records
 
-Keep session bookkeeping in one local project record, separate from the external issue or project. Update it when ownership, prerequisites, acceptance, or the next action changes; avoid duplicating updates across briefs and records. Distinguish the delivery endpoint from its next milestone, retain pending gates and resumption triggers, and replace stale state in place.
+Keep delivery coordination in one local project record, separate from the external issue or project. Reference the authoritative membership inventory and integration rather than maintaining a second native session list. Update ownership, prerequisites, acceptance, and next actions where they are owned; avoid duplicating updates across briefs, the registry, and records. Distinguish the delivery endpoint from its next milestone and retain pending gates and resumption triggers.
 
 Linear and other external trackers are not session coordination logs. Add narrative updates only for consequential decisions that future work needs, with the reason and affected scope; update authorized issue fields when actual project state changes. Keep launch IDs, acknowledgements, progress, waits, watcher output, and retirement details local. Tracker-maintenance authority does not require a post for each event. The lead records a shared decision once on the relevant issue; executors do not mirror it across tickets.
 
@@ -42,7 +46,11 @@ Use permitted native messaging for blockers. If unavailable, raise the blocker t
 
 ## Launch interface
 
-Honor the requested or established launch interface and use its installed integration. Otherwise, prefer available native session capabilities. Supply the assignment and retain returned identifiers in the project record. If the selected interface is unavailable, resolve the choice before launching a substitute.
+Honor the requested or established launch interface and use its installed integration. Otherwise, prefer available native session capabilities. Supply the assignment and retain returned identifiers in the authoritative membership inventory. If the selected interface is unavailable, resolve the choice before launching a substitute.
+
+For a new initiative, an explicit interface request wins; otherwise verify the originating interface and apply any configured default when origin is unknown. Installed software, tool availability, and inherited environment variables alone do not establish origin. Persist the selection. Existing members retain their recorded backend even when the lead's interface changes; a per-launch override does not migrate other sessions.
+
+Keep launch workspace and target repositories separate. A broad discovery/PM session can start in a parent workspace before affected repositories are known. As scope emerges, bind independent implementation sessions to the appropriate repository worktrees when the selected interface supports it. Give each the relevant shared contracts and dependencies. Do not split coupled cross-repository work solely to fit UI grouping; when preserving a broader launch workspace, keep target worktree paths explicit.
 
 Include any requested title in the brief and pass it at creation when supported. Terminal and native session titles are separate; have the receiver set a requested native title before work and record unavailable title controls locally.
 
