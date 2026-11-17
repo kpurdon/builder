@@ -1,5 +1,7 @@
 # Wait helpers
 
+Use these polling helpers only when permitted by the host and no native watch covers the wait; follow [monitor selection](../SKILL.md#owner).
+
 For rollout assignments, select the configured delivery integration first; see [Akuity MCP](akuity.md). The `rollout` command below is a direct Kubernetes Deployment adapter, not the watcher's general workload support boundary.
 
 Run `python3 <monitor-skill>/scripts/wait.py <action> ...` from the assigned working directory. Requires Python 3.10+, plus authenticated `gh` for GitHub or `kubectl` for Kubernetes. Helpers perform reads only and keep polling outside the model. They emit one terminal JSON record. `--timeout` is a required number of seconds; `--interval` defaults to 30 seconds. Each external command is bounded by the remaining deadline and at most 30 seconds. Cancel with SIGINT or SIGTERM; do not abandon a running helper.
@@ -24,4 +26,4 @@ The owner must identify the target with a pod-template label or annotation that 
 
 Rollout monitoring waits through the initial old template. If its images or selected revision change to an unexpected template, the Deployment is recreated, or the expected template is subsequently replaced, report `superseded`. Success requires the complete regular-container image map, expected template revision, observed generation, a nonzero desired replica count, and total/updated/ready/available counts all matching desired replicas. Init containers, pod image IDs, other workload kinds, Kargo promotion policy, and application behavior need separate acceptance evidence. Capture each workload separately when an assignment has several targets; one workload becoming ready does not establish environment-wide readiness.
 
-The helper owns no durable scheduler. Native subagent completion supplies the return path while the host is running; session shutdown, process loss, and future automatic resumption must be handled by the delivery owner.
+The helper owns no durable scheduler. Use the host's completion and resumption mechanism for the return path; session shutdown, process loss, and future automatic resumption remain the delivery owner's responsibility.

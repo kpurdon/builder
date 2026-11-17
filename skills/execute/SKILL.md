@@ -13,7 +13,7 @@ Begin with investigation or design when needed, then continue through authorized
 
 Retain ownership while awaiting a user gate or dependency, recording the next action and resumption trigger. Keep watching observable dependencies within established authority and stop conditions, then continue authorized work as soon as prerequisites are satisfied. If observation cannot continue, state why and identify who or what will resume the work; do not imply automatic resumption without an established mechanism.
 
-Delegate bounded observation and evidence gathering through [monitor](../monitor/SKILL.md), including CI, review feedback, rollout state, and relevant logs. Retain diagnosis, delivery ownership, and interpretation of the results.
+Use [monitor](../monitor/SKILL.md) to select native watches or bounded evidence workers for CI, review feedback, rollout state, and relevant logs. Retain diagnosis, delivery ownership, and interpretation of the results.
 
 Before creating or editing a PR body, read the [description guidance](references/pr-description.md), including when updating an existing PR during delivery. Apply it to reviewer handoffs too. A description-only request ends with draft text unless publication is requested.
 

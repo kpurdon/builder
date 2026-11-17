@@ -10,7 +10,7 @@ Use builder's $<assigned-skill> for this assignment. Read its verified skill fil
 - Initiative membership: <initiative, member and request IDs; registry/inventory and integration; verified lead identity, or standalone>
 - Worktree, branch, and revision: <verified identities>
 - Skill file: <installed path matching the explicit skill invocation>
-- Runtime: <Codex defaults or explicit model/profile/permission choices; no assumed parent inheritance>
+- Runtime: <selected host/provider and effective model/options/permissions; follow its inheritance rules and record explicit choices>
 - Decisions and prerequisites: <settled decisions, open questions for the receiver to investigate or design, usable dependencies, and pending gates with next actions and resumption triggers>
 - Work and checks: <linked evidence and gaps per the [evidence guidance](../references/quality.md#linking-sources-and-evidence); preserve unrelated changes>
 - Authority and constraints: <established grants and exclusions with sources; each user gate's concrete action and restriction, missing authority, or consequential decision; shared-resource owners>
