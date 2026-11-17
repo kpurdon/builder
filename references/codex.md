@@ -1,6 +1,6 @@
-# Codex capabilities
+# Host capabilities
 
-Prefer available native controls over custom orchestration; host instructions govern their use. For session launches, follow the [launch interface](../skills/manage/references/sessions.md#launch-interface).
+Prefer available native controls over custom orchestration; host instructions govern PR linkage, watches, delegated-work completion, browser selection, and titles. Discover the current host/provider capabilities rather than assuming the standalone Codex interface. For session launches, follow the [launch interface](../skills/manage/references/sessions.md#launch-interface).
 
 ## Goals
 

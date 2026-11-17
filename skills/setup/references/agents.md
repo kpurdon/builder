@@ -1,4 +1,10 @@
-# Native agents
+# Worker readiness
+
+Inspect the intended host's native watch and delegation capabilities before requiring a named agent. A host such as T3 may provide its own delegated tasks and completion notifications while using Codex as the underlying provider. Follow the host's selection, runtime inheritance, and completion rules. Named-role support and general worker support are separate capabilities.
+
+Workers follow the shared [observation contract](../../monitor/references/observation.md). Verify the selected worker's actual model/options and access to the assigned read interface before relying on it; native tool availability in the owner does not prove worker access. Runtime tests remain within the user's requested setup scope. If no suitable native watch or worker is available, disclose a host-permitted local fallback.
+
+## Codex named agents
 
 Builder owns [watcher.toml](../../../agents/watcher.toml), including its model, reasoning effort, and worker instructions. Codex plugin installation does not register native agents. Use the bundled installer to copy the definition into the selected user `CODEX_HOME/agents` or trusted project's `.codex/agents` directory. Do not add agent paths to the plugin manifest or change global subagent defaults.
 
@@ -12,10 +18,10 @@ For an explicitly requested agent installation or update, run the same command w
 
 Local edits, including model overrides, are preserved and reported as `modified`. Existing unmarked files and symlinks are also preserved. Show the local and bundled differences to the user for an explicit reconciliation; do not reset the fingerprint or overwrite edits to make a check pass. To replace a modified definition, move it to a user-selected backup location before installing the new one. An explicitly requested `remove` deletes only an unchanged managed definition; it preserves modified, unmarked, or symlinked files. Disabling or uninstalling the plugin does not automatically remove a separately installed agent.
 
-## Runtime readiness
+### Codex runtime readiness
 
 File installation is not runtime proof. Start a fresh session in the intended client and verify that its native spawn tool exposes named roles and discovers `watcher`. Test selection by role name, without explicit model or effort overrides, then verify the child's runtime model and effort against the installed TOML. Use a bounded synthetic observation before relying on monitoring. A role name or agent self-report is not sufficient evidence.
 
-Some clients expose only explicit model overrides and no named-role selector. Mark named-agent monitoring unavailable there; do not copy model parameters into skill prose, silently substitute a generic agent, or change runtime feature flags. The owner may perform the bounded observation locally through the selected interface with a disclosed fallback. For MCP monitoring, verify that the worker also exposes the assigned server and read tools; role discovery alone does not establish integration access. Check user and project scopes for a shadowing role when discovery or runtime settings differ from the installed definition.
+If named-role selection is unavailable, assess the host's other worker capabilities before falling back locally. Do not change runtime feature flags or silently substitute an expensive worker. For Codex named agents, check user and project scopes for a shadowing role when discovery or runtime settings differ from the installed definition.
 
 Official references: [custom agents](https://learn.chatgpt.com/docs/agent-configuration/subagents#custom-agents) and [plugin packaging](https://developers.openai.com/plugins/build/plugins#plugin-structure).
