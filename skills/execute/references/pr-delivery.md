@@ -1,6 +1,6 @@
 # PR delivery
 
-Check the repository’s contribution guide for its PR policy. Default to merge readiness unless the request, repository policy, or acceptance criteria set a different finish line.
+Check the target repository’s instructions and contribution guide for its PR policy. Default to merge readiness unless the request, repository policy, or acceptance criteria set a different finish line.
 
 Stack dependent PRs, including frontend changes that require an unmerged backend change.
 
