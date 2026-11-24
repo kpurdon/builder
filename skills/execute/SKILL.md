@@ -5,10 +5,9 @@ description: Own an agreed delivery through its finish line.
 
 # execute
 
-Follow the [working agreement](../../references/working-agreement.md).
-
-- Carry the work in the assigned session through implementation, review, and verified acceptance within the user’s authority.
-- Keep ownership during waits and user gates, using [monitor](../monitor/SKILL.md) to establish how work resumes.
+- Carry the work in the assigned session through implementation, review, and [verified acceptance](../../references/quality.md) within the user’s authority.
+- Keep ownership while waiting on checks, dependencies, or user action.
 - Follow [PR delivery](references/pr-delivery.md) and [description guidance](references/pr-description.md) for pull requests.
-- Use [session operations](../manage/references/sessions.md) for requested handoffs.
-- Use [operational procedures](references/operations.md) for interventions and [Datadog guidance](../investigate/references/datadog.md) for Datadog work.
+- Read linked evidence from independent deliveries when integrating work or checking status on request.
+- Use [session handoffs](references/sessions.md) when asked to hand off work.
+- Use [operational procedures](references/operations.md) for interventions.
