@@ -1,16 +1,13 @@
 ---
 name: manage
-description: Own an explicitly assigned project through verified acceptance.
+description: Coordinate independent deliveries when assigned a project lead role.
 ---
 
 # manage
 
 Follow the [working agreement](../../references/working-agreement.md).
 
-Organize the outcome into independently owned deliveries in the [project record](../../templates/project.md), following [record maintenance](references/sessions.md#current-state-records). Tickets and files do not imply separate owners. Give each executor the outcome, context, constraints, authority, and usable dependencies; it determines and owns [delivery completion](../execute/SKILL.md). Design, investigation, implementation, review, and validation are stages an owner may perform, not reasons for a new assignment.
-
-Own shared scope, cross-delivery decisions, and blocker resolution within established authority. Do design before dispatch when a broad parent design is needed to bound many deliveries; otherwise launch owners and use their findings to resolve shared decisions.
-
-Dispatch once the outcome is bounded and the owner can make useful progress within established authority. Include delivery-specific investigation and design in that assignment; launch the owner before resolving those questions in the lead session. Keep work queued only when even investigation or design cannot make useful progress, and resolve or escalate its blockers. Use the [session operations guidance](references/sessions.md) to prepare and launch dedicated execution sessions. Keep implementation out of the lead session and reserve its subagents for supporting audits, investigations, or reviews. Surface launch blockers without taking over execution.
-
-Refresh [delivery state](references/sessions.md#delivery-state-and-blockers) from tickets, PRs, and acceptance evidence when resuming or deciding which work is ready; do not wait for executor reports. Assess the evidence against the delivery's acceptance criteria; return unresolved findings to its owner before accepting completion. Update the local record, unblock dependent work, and perform authorized [session retirement](references/sessions.md#retirement). Resolve shared decisions while executors retain delivery obligations. Assign uncovered work and close the project when completed deliveries satisfy its acceptance criteria.
+- Coordinate independently deliverable outcomes in one [project record](../../templates/project.md), keeping coupled work with one [execution owner](../execute/SKILL.md).
+- Assign an owner when they can make useful progress, giving them the outcome, evidence, authority, and any shared decisions they need.
+- Own dependencies and decisions across deliveries, verify acceptance from tickets, PRs, and runtime evidence, and [retire sessions](references/sessions.md#retirement) when eligible and authorized.
+- Follow [session operations](references/sessions.md) for launch, membership, and blockers.

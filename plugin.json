@@ -14,7 +14,7 @@
         "displayName": "builder",
         "shortDescription": "Ideas through verified delivery",
         "defaultPrompt": [
-          "Use $manage to carry this project through agreed acceptance.",
+          "Use $manage to coordinate independent owners through project acceptance.",
           "Use $execute to get this PR ready to merge through independent review, required CI, and repository-required approvals.",
           "Use $review to review this change."
         ]

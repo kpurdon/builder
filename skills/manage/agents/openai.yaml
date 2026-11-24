@@ -1,4 +1,4 @@
 interface:
   display_name: "builder: manage"
-  short_description: "Own a project through verified acceptance"
-  default_prompt: "Use $manage to own this project through agreed acceptance."
+  short_description: "Coordinate independent delivery owners"
+  default_prompt: "Use $manage to coordinate independent owners through project acceptance."
