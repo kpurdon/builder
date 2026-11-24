@@ -20,7 +20,7 @@ Local edits, including model overrides, are preserved and reported as `modified`
 
 ### Codex runtime readiness
 
-Check whether the host lists `watcher`. Run a test observation when troubleshooting or when asked to verify execution.
+Report whether the host lists `watcher`. Confirm execution with a test observation when troubleshooting or when asked.
 
 If named-role selection is unavailable, assess the host's other worker capabilities before falling back locally. Do not change runtime feature flags or silently substitute an expensive worker. For Codex named agents, check user and project scopes for a shadowing role when discovery or runtime settings differ from the installed definition.
 
