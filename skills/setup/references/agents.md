@@ -20,7 +20,7 @@ Local edits, including model overrides, are preserved and reported as `modified`
 
 ### Codex runtime readiness
 
-File installation is not runtime proof. Start a fresh session in the intended client and verify that its native spawn tool exposes named roles and discovers `watcher`. Test selection by role name, without explicit model or effort overrides, then verify the child's runtime model and effort against the installed TOML. Use a bounded synthetic observation before relying on monitoring. A role name or agent self-report is not sufficient evidence.
+Check whether the host lists `watcher`. Run a test observation when troubleshooting or when asked to verify execution.
 
 If named-role selection is unavailable, assess the host's other worker capabilities before falling back locally. Do not change runtime feature flags or silently substitute an expensive worker. For Codex named agents, check user and project scopes for a shadowing role when discovery or runtime settings differ from the installed definition.
 
